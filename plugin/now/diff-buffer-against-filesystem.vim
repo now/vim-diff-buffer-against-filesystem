@@ -1,7 +1,3 @@
-" Vim plugin file
-" Maintainer:       Nikolai Weibull <now@bitwi.se>
-" Latest Revision:  2008-10-21
-
 if exists('loaded_plugin_now_diff_buffer_against_filesystem')
   finish
 endif
