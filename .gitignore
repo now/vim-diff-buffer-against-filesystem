@@ -1,1 +1,4 @@
-config.mk
+*.sw?
+*.vba
+*.gz
+Manifest
