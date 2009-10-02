@@ -35,12 +35,16 @@ function! s:diff_buffer_against_filesystem_open()
 
   let file_buffer = winbufnr(0)
 
+  let filetype = &filetype
   let title = '[Diff] ' . expand('%')
-  execute 'vertical rightbelow new' title
-  let diff_buffer = winbufnr(0)
+  vertical rightbelow new
   set buftype=nofile bufhidden=wipe nobuflisted noswapfile modifiable
+  execute 'file' title
+  let diff_buffer = winbufnr(0)
   read #
   0delete _
+
+  execute 'setf' filetype
 
   set nomodifiable
   diffthis
