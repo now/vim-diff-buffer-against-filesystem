@@ -12,7 +12,7 @@ install: build
 
 package: $(VIMBALL).gz
 
-%.vba: Manifest
+%.vba: Manifest $(FILES)
 	ex -N -c '%MkVimball! $@ .' -c 'quit!' $<
 
 %.gz: %
